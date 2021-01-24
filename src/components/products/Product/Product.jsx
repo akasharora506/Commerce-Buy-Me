@@ -8,19 +8,17 @@ const Product = (props) => {
     const classes = useStyles();
     return (
         <Card className={classes.root}>
-            <CardMedia className={classes.media} title={product.name} image={product.image} />
+            <CardMedia className={classes.media} title={product.name} image={product.assets[0].url} />
             <CardContent>
                 <div className={classes.cardContent}>
-                    <Typography variant="h5" gutterBottom>
+                    <Typography variant="h5" className={classes.alignItemsCenter} gutterBottom>
                         {product.name}
                     </Typography>
-                    <Typography variant="h5" gutterBottom>
-                        {product.price}
+                    <Typography className={classes.alignItemsCenter} gutterBottom>
+                        {product.price.formatted_with_symbol}
                     </Typography>
                 </div>
-                <Typography variant="h7" color="textSecondary">
-                    {product.description}
-                </Typography>
+                <Typography dangerouslySetInnerHTML={{ __html: product.description }} color="textSecondary"></Typography>
             </CardContent>
             <CardActions disableSpacing className={classes.cardActions}>
                 <IconButton aria-label="Add to cart">

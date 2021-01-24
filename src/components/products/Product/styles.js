@@ -16,4 +16,8 @@ export default makeStyles(() => ({
         display: 'flex',
         justifyContent: 'space-between',
     },
+    alignItemsCenter: {
+        display: 'flex',
+        alignItems: 'center',
+    },
 }));

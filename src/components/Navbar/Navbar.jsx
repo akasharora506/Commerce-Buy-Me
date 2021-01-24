@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, IconButton, Badge, MenuItem, Menu, Typography } from '@material-ui/core';
+import { AppBar, Toolbar, IconButton, Badge, /*MenuItem, Menu, */ Typography } from '@material-ui/core';
 import { ShoppingCart } from '@material-ui/icons';
 
 import useStyles from './styles';
@@ -17,7 +17,7 @@ export default function Navbar() {
                         Recliner Studio
                     </Typography>
                     <div className={classes.grow} />
-                    <div className={classes.button}>
+                    <div>
                         <IconButton aria-label="Show cart items" color="inherit">
                             <Badge badgeContent={2} color="secondary">
                                 <ShoppingCart />
